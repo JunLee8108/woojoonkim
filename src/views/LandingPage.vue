@@ -4,7 +4,9 @@
       <v-spacer></v-spacer>
 
       <div class="artistName">
-        <router-link class="linkStyle" style="color: inherit" to="/about">Woojoon Kim</router-link>
+        <v-hover open-delay="200">
+          <router-link class="linkStyle" style="color: inherit" to="/about">Woojoon Kim</router-link>
+        </v-hover>
       </div>
 
       <v-spacer></v-spacer>
@@ -13,6 +15,9 @@
     <br><br><br>
     <div class="mid">
       Fine Art Painter.
+    </div>
+    <div class="mid">
+      Artist.
     </div>
 
     <br><br><br><br><br>
@@ -40,7 +45,6 @@
           Fragment (2018)
         </div>
       </v-card>
-
     </div>
 
     <br><br>
@@ -72,7 +76,7 @@
     </div>
 
     <br><br>
-    <FooterVue/>
+    <FooterVue />
   </v-container>
 </template>
 
@@ -95,6 +99,7 @@ export default {
 .artistName {
   font-size: 18px;
   font-family: 'Times New Roman', Times, serif;
+  text-align: center;
 }
 
 .linkStyle {

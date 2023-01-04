@@ -12,24 +12,21 @@
             </div>
 
             <div class="artistName">
-                <router-link class="linkStyle" style="color: inherit" to="/contributor">Contributor</router-link>
+                <router-link class="linkStyle" style="color: inherit" to="/">Contributor</router-link>
             </div>
 
             <div class="artistName">
                 <router-link class="linkStyle" style="color: inherit" to="/">Contact</router-link>
             </div>
 
-            <!-- aa -->
-
-
             <v-spacer></v-spacer>
         </v-app-bar>
 
         <div class="mid">
-            About Me
+            Contributor
         </div>
         <br>
-        <v-img src="./images/image4.png" width="300" height="300"></v-img>
+        <v-img src="./images/Jun Lee.png" width="300" height="300"></v-img>
 
         <!-- Footer -->
         <br><br><br>
@@ -40,7 +37,7 @@
 <script>
 import FooterVue from './Footer.vue';
 export default {
-    name: "AboutPage",
+    name: "ContributorPage",
 
     components: {
         FooterVue,
