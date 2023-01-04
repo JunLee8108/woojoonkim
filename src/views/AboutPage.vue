@@ -1,30 +1,9 @@
 <template>
     <v-container>
-        <v-app-bar app elevation="0" color="white">
-            <v-spacer></v-spacer>
+        <!-- Navigation -->
+        <NavigationVue/>
 
-            <div class="artistName">
-                <router-link class="linkStyle" style="color: inherit" to="/">Home</router-link>
-            </div>
-
-            <div class="artistName">
-                <router-link class="linkStyle" style="color: inherit" to="/about">About Me</router-link>
-            </div>
-
-            <div class="artistName">
-                <router-link class="linkStyle" style="color: inherit" to="/contributor">Contributor</router-link>
-            </div>
-
-            <div class="artistName">
-                <router-link class="linkStyle" style="color: inherit" to="/">Contact</router-link>
-            </div>
-
-            <!-- aa -->
-
-
-            <v-spacer></v-spacer>
-        </v-app-bar>
-
+        <br>
         <div class="mid">
             About Me
         </div>
@@ -39,11 +18,14 @@
   
 <script>
 import FooterVue from './Footer.vue';
+import NavigationVue from './Navigation.vue';
+
 export default {
     name: "AboutPage",
 
     components: {
         FooterVue,
+        NavigationVue,
     },
 
     data: () => ({

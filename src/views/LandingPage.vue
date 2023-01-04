@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-app-bar app elevation="0" color="white">
+    <v-app-bar app elevation="0" color="white" height="50px">
       <v-spacer></v-spacer>
 
       <div class="artistName">
@@ -72,11 +72,40 @@
           Toad House 3
         </div>
       </v-card>
+    </div>
+
+    <br><br>
+    <div class="d-flex justify-space-around mb-6" :color="$vuetify.theme.dark ? 'grey darken-3' : 'grey lighten-4'" flat
+      tile>
+      <v-card v-for="n in 3" :key="n" class="pa-2" outlined tile>
+        <div v-if="n === 1">
+          <v-img src="./images/image1.jpeg" width="300" height="425"></v-img>
+        </div>
+        <div v-else-if="n === 2">
+          <v-img src="./images/image1.jpeg" width="300" height="425"></v-img>
+        </div>
+        <div v-else-if="n === 3">
+          <v-img src="./images/image1.jpeg" width="300" height="425"></v-img>
+        </div>
+        <br>
+
+        <div v-if="n === 1" class="workName">
+          Toad House
+        </div>
+        <div v-if="n === 2" class="workName">
+          Wrath
+        </div>
+        <div v-if="n === 3" class="workName">
+          Toad House 3
+        </div>
+      </v-card>
 
     </div>
 
     <br><br>
+    <center>
     <FooterVue />
+  </center>
   </v-container>
 </template>
 
