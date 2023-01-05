@@ -9,7 +9,6 @@
         <!-- <v-img src="./images/image4.png" width="300" height="300"></v-img> -->
 
         <v-container>
-            <br>
             <v-row align="center" justify="center">
                 <v-col cols="12" sm="10">
                     <v-card class="elevation-1 mt-10">
@@ -50,7 +49,7 @@
         </v-container>
 
         <br><br>
-        <div class="mid">
+        <div class="mid2">
             Developed by.
         </div>
 
@@ -131,6 +130,14 @@ export default {
 .mid {
     text-align: center;
     font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: -40px;
+    font-style: italic;
+}
+
+.mid2 {
+    text-align: center;
+    font-size: 28px;
     font-family: 'Times New Roman', Times, serif;
     margin-bottom: -40px;
     font-style: italic;

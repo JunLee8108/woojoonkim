@@ -25,16 +25,15 @@
       tile>
       <v-card v-for="n in 3" :key="n" class="pa-2" outlined tile>
         <div v-if="n === 1">
-          <v-img src="./images/image1.jpeg" width="300" height="425"></v-img>
+          <v-img @click="dialog = true" src="./images/image1.jpeg" width="300" height="425"></v-img>
         </div>
         <div v-else-if="n === 2">
-          <v-img src="./images/image2.png" width="300" height="425"></v-img>
+          <v-img @click="dialog2 = true" src="./images/image2.png" width="300" height="425"></v-img>
         </div>
         <div v-else-if="n === 3">
-          <v-img src="./images/image3.png" width="300" height="425"></v-img>
+          <v-img @click="dialog3 = true" src="./images/image3.png" width="300" height="425"></v-img>
         </div>
         <br>
-
         <div v-if="n === 1" class="workName">
           Toad House (2018)
         </div>
@@ -52,16 +51,15 @@
       tile>
       <v-card v-for="n in 3" :key="n" class="pa-2" outlined tile>
         <div v-if="n === 1">
-          <v-img src="./images/image1.jpeg" width="300" height="425"></v-img>
+          <v-img @click="dialog4 = true" src="./images/image1.jpeg" width="300" height="425"></v-img>
         </div>
         <div v-else-if="n === 2">
-          <v-img src="./images/image1.jpeg" width="300" height="425"></v-img>
+          <v-img @click="dialog5 = true" src="./images/image1.jpeg" width="300" height="425"></v-img>
         </div>
         <div v-else-if="n === 3">
-          <v-img src="./images/image1.jpeg" width="300" height="425"></v-img>
+          <v-img @click="dialog6 = true" src="./images/image1.jpeg" width="300" height="425"></v-img>
         </div>
         <br>
-
         <div v-if="n === 1" class="workName">
           Toad House
         </div>
@@ -79,16 +77,15 @@
       tile>
       <v-card v-for="n in 3" :key="n" class="pa-2" outlined tile>
         <div v-if="n === 1">
-          <v-img src="./images/image1.jpeg" width="300" height="425"></v-img>
+          <v-img @click="dialog7 = true" src="./images/image1.jpeg" width="300" height="425"></v-img>
         </div>
         <div v-else-if="n === 2">
-          <v-img src="./images/image1.jpeg" width="300" height="425"></v-img>
+          <v-img @click="dialog8 = true" src="./images/image1.jpeg" width="300" height="425"></v-img>
         </div>
         <div v-else-if="n === 3">
-          <v-img src="./images/image1.jpeg" width="300" height="425"></v-img>
+          <v-img @click="dialog9 = true" src="./images/image1.jpeg" width="300" height="425"></v-img>
         </div>
         <br>
-
         <div v-if="n === 1" class="workName">
           Toad House
         </div>
@@ -99,13 +96,61 @@
           Toad House 3
         </div>
       </v-card>
+    </div>
 
+    <!-- dialog (modal) -->
+    <div class="text-center">
+      <v-dialog v-model="dialog" width="500">
+        <v-card>
+          <v-img src="./images/image1.jpeg"></v-img>
+        </v-card>
+      </v-dialog>
+      <v-dialog v-model="dialog2" width="500">
+        <v-card>
+          <v-img src="./images/image2.png"></v-img>
+        </v-card>
+      </v-dialog>
+      <v-dialog v-model="dialog3" width="500">
+        <v-card>
+          <v-img src="./images/image3.png"></v-img>
+        </v-card>
+      </v-dialog>
+      <v-dialog v-model="dialog4" width="500">
+        <v-card>
+          <v-img src="./images/image1.jpeg"></v-img>
+        </v-card>
+      </v-dialog>
+      <v-dialog v-model="dialog5" width="500">
+        <v-card>
+          <v-img src="./images/image1.jpeg"></v-img>
+        </v-card>
+      </v-dialog>
+      <v-dialog v-model="dialog6" width="500">
+        <v-card>
+          <v-img src="./images/image1.jpeg"></v-img>
+        </v-card>
+      </v-dialog>
+      <v-dialog v-model="dialog7" width="500">
+        <v-card>
+          <v-img src="./images/image1.jpeg"></v-img>
+        </v-card>
+      </v-dialog>
+      <v-dialog v-model="dialog8" width="500">
+        <v-card>
+          <v-img src="./images/image1.jpeg"></v-img>
+        </v-card>
+      </v-dialog>
+      <v-dialog v-model="dialog9" width="500">
+        <v-card>
+          <v-img src="./images/image1.jpeg"></v-img>
+        </v-card>
+      </v-dialog>
     </div>
 
     <br><br>
     <center>
-    <FooterVue />
-  </center>
+      <FooterVue />
+    </center>
   </v-container>
 </template>
 
@@ -119,8 +164,20 @@ export default {
   },
 
   data: () => ({
-
+    dialog: false,
+    dialog2: false,
+    dialog3: false,
+    dialog4: false,
+    dialog5: false,
+    dialog6: false,
+    dialog7: false,
+    dialog8: false,
+    dialog9: false,
   }),
+
+  methods: {
+
+  },
 };
 </script>
 
