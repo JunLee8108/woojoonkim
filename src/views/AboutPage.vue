@@ -35,6 +35,7 @@
                                                 I'm a fine art painter and artist. Currently based in New York. I'm a
                                                 fine art painter and artist. Currently based in New York.
                                                 I'm a fine art painter and artist. Currently based in New York.I'm a
+                                                fine art painter and artist. Currently based in New York. 
                                                 fine art painter and artist. Currently based in New York.
                                             </div>
                                             <div class="introduction"></div>
@@ -84,6 +85,7 @@ export default {
     font-size: 50px;
     font-family: 'Times New Roman', Times, serif;
     margin-bottom: -40px;
+    font-style: italic;
 }
 
 .introduceName {
@@ -100,7 +102,7 @@ export default {
     text-align: center;
     font-weight: bold;
     font-size: 55px;
-    margin-left: -100px;
+    margin-left: -130px;
     margin-top: 5px;
 }
 

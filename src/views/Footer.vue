@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-footer height="185px" padless app color="white">
+        <v-footer height="185px" padless color="white">
             <v-spacer></v-spacer>
             <v-card flat tile class="white lighten-1 text-center">
                 <v-card-text>

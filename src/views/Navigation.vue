@@ -13,10 +13,6 @@
             <div class="artistName">
                 <router-link class="linkStyle" style="color: inherit" to="/contributor">Contributor</router-link>
             </div>
-
-            <div class="artistName">
-                <router-link class="linkStyle" style="color: inherit" to="/">Contact</router-link>
-            </div>
             <v-spacer></v-spacer>
         </v-app-bar>
     </v-container>

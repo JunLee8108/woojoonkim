@@ -103,6 +103,7 @@ export default {
     text-align: center;
     font-size: 50px;
     font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
 }
 </style>
   
