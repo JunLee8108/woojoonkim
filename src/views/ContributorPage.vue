@@ -12,11 +12,12 @@
             <div class="d-flex justify-space-around mb-6"
                 :color="$vuetify.theme.dark ? 'grey darken-3' : 'grey lighten-4'" flat>
                 <v-card class="pa-2" outlined tile>
-                    <v-img class="imgClass" src="./images/Jun Lee.png" width="280" height="330"></v-img>
+                    <v-img class="imgClass" src="./images/Jun Lee.png" width="190" height="230"></v-img>
                     <br>
                     <div class="contributorName">
                         Jun Lee
-                        <br>
+                    </div>
+                    <div class="contributorName2">
                         Website Developer
                     </div>
                     <br>
@@ -34,7 +35,7 @@
         </v-container>
 
         <!-- Footer -->
-        
+
         <FooterVue />
     </v-container>
 </template>
@@ -82,6 +83,13 @@ export default {
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
     font-style: italic;
+    font-weight: bold;
+}
+
+.contributorName2 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
     font-weight: bold;
 }
 
