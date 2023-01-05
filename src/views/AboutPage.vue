@@ -49,8 +49,32 @@
             </v-row>
         </v-container>
 
+        <br><br>
+        <div class="mid">
+            Developed by.
+        </div>
+
+        <br><br>
+        <v-container>
+                    <div class="contributorName">
+                        Jun Lee
+                    </div>
+                    <div class="contributorName2">
+                        Website Developer
+                    </div>
+                    <div class="contact">
+                        lejhn1@gmail.com
+                        <br>
+                        <v-btn v-for="icon in icons" :key="icon" class="mx-4" icon @click="iconMove(icon)">
+                            <v-icon size="24px">
+                                {{ icon }}
+                            </v-icon>
+                        </v-btn>
+            </div>
+        </v-container>
+
         <!-- Footer -->
-        <br><br><br>
+        <br>
         <FooterVue />
     </v-container>
 </template>
@@ -74,6 +98,30 @@ export default {
 </script>
   
 <style scoped>
+.imgClass {
+    text-align: center;
+    margin-left: 30px;
+}
+
+.contributorName {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contributorName2 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.contact {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
 .artistName {
     font-size: 18px;
     font-family: 'Times New Roman', Times, serif;

@@ -10,9 +10,9 @@
                 <router-link class="linkStyle" style="color: inherit" to="/about">About Me</router-link>
             </div>
 
-            <div class="artistName">
+            <!-- <div class="artistName">
                 <router-link class="linkStyle" style="color: inherit" to="/contributor">Contributor</router-link>
-            </div>
+            </div> -->
             <v-spacer></v-spacer>
         </v-app-bar>
     </v-container>
