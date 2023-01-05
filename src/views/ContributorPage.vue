@@ -11,8 +11,8 @@
         <v-container>
             <div class="d-flex justify-space-around mb-6"
                 :color="$vuetify.theme.dark ? 'grey darken-3' : 'grey lighten-4'" flat>
-                <v-card class="pa-2" outlined tile>
-                    <v-img class="imgClass" src="./images/Jun Lee.png" width="190" height="230"></v-img>
+                <v-card class="pa-2" tile>
+                    <v-img class="imgClass" src="./images/worker.png" width="85" height="85"></v-img>
                     <br>
                     <div class="contributorName">
                         Jun Lee
@@ -76,12 +76,13 @@ export default {
 <style scoped>
 .imgClass {
     text-align: center;
+    margin-left: 30px;
 }
 
 .contributorName {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
+    font-size: 18px;
     font-style: italic;
     font-weight: bold;
 }
@@ -89,14 +90,14 @@ export default {
 .contributorName2 {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
 }
 
 .contact {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .mid {
