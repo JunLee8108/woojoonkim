@@ -41,7 +41,7 @@ export default {
 
 <style scoped>
 .artistName {
-    font-size: 15px;
+    font-size: 17px;
     font-family: 'Times New Roman', Times, serif;
     margin: 30px;
 }
