@@ -1,23 +1,20 @@
 <template>
-    <v-container>
-        <v-app-bar app elevation="0" color="white">
+    <div>
+        <v-app-bar app elevation="0" color="white" height="50px">
             <v-spacer></v-spacer>
-            <div class="artistName">
-                <router-link class="linkStyle" style="color: inherit" to="/">Home</router-link>
-            </div>
-
-            <div class="artistName">
-                <router-link class="linkStyle" style="color: inherit" to="/about">About Me</router-link>
-            </div>
-
-            <!-- <div class="artistName">
-                <router-link class="linkStyle" style="color: inherit" to="/contributor">Contributor</router-link>
-            </div> -->
+            <v-hover v-slot="{ hover }">
+                <v-btn block class="name" :class="{ 'on-hover': hover }" :elevation="hover ? 5 : 0" @click="moveHome()"
+                    text color="#808080">
+                    <div class="artistName">
+                        Home
+                    </div>
+                </v-btn>
+            </v-hover>
             <v-spacer></v-spacer>
         </v-app-bar>
-    </v-container>
+    </div>
 </template>
-  
+
 <script>
 export default {
     name: "NavigationVue",
@@ -25,14 +22,27 @@ export default {
     data: () => ({
 
     }),
+
+    methods: {
+        moveAbout() {
+            this.$router.push({
+                path: "about",
+            });
+        },
+        moveHome() {
+            this.$router.push({
+                path: "/",
+            });
+        },
+
+    },
 };
 </script>
-  
+
 <style scoped>
 .artistName {
-    font-size: 18px;
+    font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
     margin: 30px;
 }
 </style>
-  

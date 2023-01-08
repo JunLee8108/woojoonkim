@@ -3,11 +3,17 @@
     <v-app-bar app elevation="0" color="white" height="50px">
       <v-spacer></v-spacer>
 
-      <div class="artistName">
-        <v-hover open-delay="200">
-          <router-link class="linkStyle" style="color: inherit" to="/about">Woojoon Kim</router-link>
+          <!-- <router-link class="linkStyle" style="color: inherit" to="/about">Woojoon Kim</router-link> -->
+          <v-hover 
+          v-slot="{ hover }"
+          >
+          <v-btn @click="moveAbout()" :class="{ 'on-hover': hover }" :elevation="hover ? 5 : 0" width="100%" plain>
+            <div class="artistName">
+            Woojoon Kim
+          </div>
+          </v-btn>
         </v-hover>
-      </div>
+    
 
       <v-spacer></v-spacer>
     </v-app-bar>
@@ -176,14 +182,18 @@ export default {
   }),
 
   methods: {
-
+    moveAbout() {
+            this.$router.push({
+                path: "about",
+            });
+        },
   },
 };
 </script>
 
 <style>
 .artistName {
-  font-size: 18px;
+  font-size: 15px;
   font-family: 'Times New Roman', Times, serif;
   text-align: center;
 }

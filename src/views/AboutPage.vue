@@ -3,6 +3,7 @@
         <!-- Navigation -->
         <NavigationVue />
 
+        <br>
         <div class="mid">
             About Me.
         </div>
