@@ -3,7 +3,7 @@
         <v-app-bar app elevation="0" color="white" height="50px">
             <v-spacer></v-spacer>
             <v-hover v-slot="{ hover }">
-                <v-btn block :class="{ 'on-hover': hover }" :elevation="hover ? 5 : 0" @click="moveHome()"
+                <v-btn @click="moveHome()" plain width="100%" :class="{ 'on-hover': hover }" :elevation="hover ? 5 : 0" 
                     text>
                     <div class="artistName">
                         Home
