@@ -3,18 +3,14 @@
     <v-app-bar app elevation="0" color="white" height="50px">
       <v-spacer></v-spacer>
 
-          <!-- <router-link class="linkStyle" style="color: inherit" to="/about">Woojoon Kim</router-link> -->
-          <v-hover 
-          v-slot="{ hover }"
-          >
-          <v-btn @click="moveAbout()" :class="{ 'on-hover': hover }" :elevation="hover ? 5 : 0" width="100%" plain>
-            <div class="artistName">
+      <!-- <router-link class="linkStyle" style="color: inherit" to="/about">Woojoon Kim</router-link> -->
+      <v-hover v-slot="{ hover }">
+        <v-btn @click="moveAbout()" :class="{ 'on-hover': hover }" :elevation="hover ? 5 : 0" width="100%" plain>
+          <div class="artistName">
             Woojoon Kim
           </div>
-          </v-btn>
-        </v-hover>
-    
-
+        </v-btn>
+      </v-hover>
       <v-spacer></v-spacer>
     </v-app-bar>
 
@@ -27,9 +23,9 @@
     </div>
 
     <br><br><br><br><br>
-    <div class="d-flex justify-space-around mb-6" :color="$vuetify.theme.dark ? 'grey darken-3' : 'grey lighten-4'" flat
-      tile>
-      <v-card v-for="n in 3" :key="n" class="pa-2" outlined tile>
+
+    <v-row justify="center">
+      <v-card v-for="n in 3" :key="n" class="ma-8 pa-2" outlined tile>
         <div v-if="n === 1">
           <v-img @click="dialog = true" src="./images/image1.jpeg" width="300" height="425"></v-img>
         </div>
@@ -50,12 +46,8 @@
           Fragment (2018)
         </div>
       </v-card>
-    </div>
 
-    <br><br>
-    <div class="d-flex justify-space-around mb-6" :color="$vuetify.theme.dark ? 'grey darken-3' : 'grey lighten-4'" flat
-      tile>
-      <v-card v-for="n in 3" :key="n" class="pa-2" outlined tile>
+      <v-card v-for="n in 3" :key="n" class="ma-8 pa-2" outlined tile>
         <div v-if="n === 1">
           <v-img @click="dialog4 = true" src="./images/image1.jpeg" width="300" height="425"></v-img>
         </div>
@@ -67,21 +59,17 @@
         </div>
         <br>
         <div v-if="n === 1" class="workName">
-          Toad House
+          Toad House 2
         </div>
         <div v-if="n === 2" class="workName">
-          Wrath
-        </div>
-        <div v-if="n === 3" class="workName">
           Toad House 3
         </div>
+        <div v-if="n === 3" class="workName">
+          Toad House 4
+        </div>
       </v-card>
-    </div>
 
-    <br><br>
-    <div class="d-flex justify-space-around mb-6" :color="$vuetify.theme.dark ? 'grey darken-3' : 'grey lighten-4'" flat
-      tile>
-      <v-card v-for="n in 3" :key="n" class="pa-2" outlined tile>
+      <v-card v-for="n in 3" :key="n" class="ma-8 pa-2" outlined tile>
         <div v-if="n === 1">
           <v-img @click="dialog7 = true" src="./images/image1.jpeg" width="300" height="425"></v-img>
         </div>
@@ -93,16 +81,16 @@
         </div>
         <br>
         <div v-if="n === 1" class="workName">
-          Toad House
+          Toad House 5
         </div>
         <div v-if="n === 2" class="workName">
-          Wrath
+          Toad House 6
         </div>
         <div v-if="n === 3" class="workName">
-          Toad House 3
+          Toad House 7
         </div>
       </v-card>
-    </div>
+    </v-row>
 
     <!-- dialog (modal) -->
     <div class="text-center">
@@ -183,10 +171,10 @@ export default {
 
   methods: {
     moveAbout() {
-            this.$router.push({
-                path: "about",
-            });
-        },
+      this.$router.push({
+        path: "about",
+      });
+    },
   },
 };
 </script>
