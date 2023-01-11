@@ -19,7 +19,7 @@
                                     <v-col cols="12" md="6">
                                         <div style="text-align: center; padding: 20px 0">
                                             <v-card-text class="white--text">
-                                                <img height="350" src="./images/image4.png" />
+                                                <v-img class="introduceImage" src="./images/image4.png" />
                                             </v-card-text>
                                         </div>
                                     </v-col>
@@ -35,7 +35,7 @@
                                                 I'm a fine art painter and artist. Currently based in New York. I'm a
                                                 fine art painter and artist. Currently based in New York.
                                                 I'm a fine art painter and artist. Currently based in New York.I'm a
-                                                fine art painter and artist. Currently based in New York. 
+                                                fine art painter and artist. Currently based in New York.
                                                 fine art painter and artist. Currently based in New York.
                                             </div>
                                             <div class="introduction"></div>
@@ -56,20 +56,20 @@
 
         <br><br>
         <v-container>
-                    <div class="contributorName">
-                        Jun Lee
-                    </div>
-                    <div class="contributorName2">
-                        Website Developer
-                    </div>
-                    <div class="contact">
-                        lejhn1@gmail.com
-                        <br>
-                        <v-btn v-for="icon in icons" :key="icon" class="mx-4" icon @click="iconMove(icon)">
-                            <v-icon size="24px">
-                                {{ icon }}
-                            </v-icon>
-                        </v-btn>
+            <div class="contributorName">
+                Jun Lee
+            </div>
+            <div class="contributorName2">
+                Website Developer
+            </div>
+            <div class="contact">
+                lejhn1@gmail.com
+                <br>
+                <v-btn v-for="icon in icons" :key="icon" class="mx-4" icon @click="iconMove(icon)">
+                    <v-icon size="24px">
+                        {{ icon }}
+                    </v-icon>
+                </v-btn>
             </div>
         </v-container>
 
@@ -78,7 +78,7 @@
         <FooterVue />
     </v-container>
 </template>
-  
+
 <script>
 import FooterVue from './Footer.vue';
 import NavigationVue from './Navigation.vue';
@@ -96,7 +96,7 @@ export default {
     }),
 };
 </script>
-  
+
 <style scoped>
 .imgClass {
     text-align: center;
@@ -122,6 +122,7 @@ export default {
     font-family: 'Times New Roman', Times, serif;
     font-size: 14px;
 }
+
 .artistName {
     font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
@@ -144,6 +145,24 @@ export default {
     font-style: italic;
 }
 
+.introduceImage {
+    width: 350px;
+    height: 350px;
+}
+
+@media screen and (min-width:601px) and (max-width: 960px) {
+    .introduceImage {
+        margin: auto;
+    }
+}
+
+@media screen and (min-width:961px) and (max-width: 1264px) {
+    .introduceImage {
+        width: 300px;
+        height: 350px;
+    }
+}
+
 .introduceName {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
@@ -151,6 +170,30 @@ export default {
     font-size: 30px;
     margin-left: -300px;
     margin-top: -50px;
+}
+
+@media screen and (max-width: 600px) {
+    .introduceName {
+        font-size: 25px;
+        margin: 0;
+        margin-top: -190px;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width: 960px) {
+    .introduceName {
+        font-size: 30px;
+        margin: 0;
+        margin-top: -190px;
+    }
+}
+
+@media screen and (min-width:961px) and (max-width: 1264px) {
+    .introduceName {
+        font-size: 30px;
+        margin-left: -188px;
+        margin-top: -50px;
+    }
 }
 
 .introduceName2 {
@@ -162,6 +205,27 @@ export default {
     margin-top: 5px;
 }
 
+@media screen and (max-width: 600px) {
+    .introduceName2 {
+        font-size: 38px;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width: 960px) {
+    .introduceName2 {
+        font-size: 45px;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width:961px) and (max-width: 1264px) {
+    .introduceName2 {
+        font-size: 45px;
+        margin-left: -80px;
+    }
+}
+
 .introduction {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
@@ -169,6 +233,33 @@ export default {
     margin-left: -70px;
     margin-top: 10px;
     color: grey;
+}
+
+@media screen and (max-width: 600px) {
+    .introduction {
+        font-size: 20px;
+        text-align: center;
+        margin: 0;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width: 960px) {
+    .introduction {
+        font-size: 20px;
+        text-align: center;
+        margin: 0;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width:961px) and (max-width: 1264px) {
+    .introduction {
+        font-size: 18px;
+        text-align: center;
+        margin-left: -50px;
+        margin-top: 10px;
+    }
 }
 
 .v-application .rounded-bl-xl {
@@ -179,4 +270,3 @@ export default {
     border-bottom-right-radius: 500px !important;
 }
 </style>
-  
