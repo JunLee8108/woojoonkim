@@ -96,47 +96,47 @@
     <div class="text-center">
       <v-dialog v-model="dialog" width="500">
         <v-card>
-          <v-img src="./images/image1.jpeg"></v-img>
+          <v-img @click="dialog = false" src="./images/image1.jpeg"></v-img>
         </v-card>
       </v-dialog>
       <v-dialog v-model="dialog2" width="500">
         <v-card>
-          <v-img src="./images/image2.png"></v-img>
+          <v-img @click="dialog2 = false" src="./images/image2.png"></v-img>
         </v-card>
       </v-dialog>
       <v-dialog v-model="dialog3" width="500">
         <v-card>
-          <v-img src="./images/image3.png"></v-img>
+          <v-img @click="dialog3 = false" src="./images/image3.png"></v-img>
         </v-card>
       </v-dialog>
       <v-dialog v-model="dialog4" width="500">
         <v-card>
-          <v-img src="./images/image1.jpeg"></v-img>
+          <v-img @click="dialog4 = false" src="./images/image1.jpeg"></v-img>
         </v-card>
       </v-dialog>
       <v-dialog v-model="dialog5" width="500">
         <v-card>
-          <v-img src="./images/image1.jpeg"></v-img>
+          <v-img @click="dialog5 = false" src="./images/image1.jpeg"></v-img>
         </v-card>
       </v-dialog>
       <v-dialog v-model="dialog6" width="500">
         <v-card>
-          <v-img src="./images/image1.jpeg"></v-img>
+          <v-img @click="dialog6 = false" src="./images/image1.jpeg"></v-img>
         </v-card>
       </v-dialog>
       <v-dialog v-model="dialog7" width="500">
         <v-card>
-          <v-img src="./images/image1.jpeg"></v-img>
+          <v-img @click="dialog7 = false" src="./images/image1.jpeg"></v-img>
         </v-card>
       </v-dialog>
       <v-dialog v-model="dialog8" width="500">
         <v-card>
-          <v-img src="./images/image1.jpeg"></v-img>
+          <v-img @click="dialog8 = false" src="./images/image1.jpeg"></v-img>
         </v-card>
       </v-dialog>
       <v-dialog v-model="dialog9" width="500">
         <v-card>
-          <v-img src="./images/image1.jpeg"></v-img>
+          <v-img @click="dialog9 = false" src="./images/image1.jpeg"></v-img>
         </v-card>
       </v-dialog>
     </div>
