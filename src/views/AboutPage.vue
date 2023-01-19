@@ -188,11 +188,11 @@ export default {
     }
 }
 
-@media screen and (min-width:961px) and (max-width: 1264px) {
+@media screen and (min-width:1441px) {
     .introduceName {
-        font-size: 30px;
-        margin-left: -188px;
+        font-size: 40px;
         margin-top: -50px;
+        margin-left: -600px;
     }
 }
 
@@ -223,6 +223,13 @@ export default {
     .introduceName2 {
         font-size: 45px;
         margin-left: -80px;
+    }
+}
+
+@media screen and (min-width:1441px) {
+    .introduceName2 {
+        font-size: 45px;
+        margin-left: -400px;
     }
 }
 
@@ -259,6 +266,16 @@ export default {
         text-align: center;
         margin-left: -50px;
         margin-top: 10px;
+    }
+}
+
+@media screen and (min-width:1441px) {
+    .introduction {
+        font-size: 25px;
+        text-align: center;
+        margin-top: 35px;
+        margin-right: 80px;
+        margin-left: -270px;
     }
 }
 

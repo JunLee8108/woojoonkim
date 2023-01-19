@@ -14,6 +14,8 @@
       <v-spacer></v-spacer>
     </v-app-bar>
 
+    <!-- <v-switch class="darkModeSwitch" v-model="$vuetify.theme.dark" inset label="Dark Mode"></v-switch> -->
+
     <br><br><br>
     <div class="mid">
       Fine Art Painter.
@@ -199,5 +201,9 @@ export default {
 .workName {
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
+}
+
+.darkModeSwitch {
+  float: right;
 }
 </style>
