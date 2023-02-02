@@ -148,27 +148,27 @@
           <v-img @click="dialog6 = false" src="./images/artWork8.png"></v-img>
         </v-card>
       </v-dialog>
-      <v-dialog v-model="dialog7" width="600">
+      <v-dialog v-model="dialog7" width="800">
         <v-card>
           <v-img @click="dialog7 = false" src="./images/artWork9.png"></v-img>
         </v-card>
       </v-dialog>
-      <v-dialog v-model="dialog8" width="600">
+      <v-dialog v-model="dialog8" width="800">
         <v-card>
           <v-img @click="dialog8 = false" src="./images/artWork10.png"></v-img>
         </v-card>
       </v-dialog>
-      <v-dialog v-model="dialog9" width="600">
+      <v-dialog v-model="dialog9" width="800">
         <v-card>
           <v-img @click="dialog9 = false" src="./images/artWork11.png"></v-img>
         </v-card>
       </v-dialog>
-      <v-dialog v-model="dialog10" width="600">
+      <v-dialog v-model="dialog10" width="800">
         <v-card>
           <v-img @click="dialog10 = false" src="./images/artWork13.png"></v-img>
         </v-card>
       </v-dialog>
-      <v-dialog v-model="dialog11" width="600">
+      <v-dialog v-model="dialog11" width="800">
         <v-card>
           <v-img @click="dialog11 = false" src="./images/artWork14.png"></v-img>
         </v-card>
