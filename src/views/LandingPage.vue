@@ -29,13 +29,13 @@
     <v-row justify="center">
       <v-card v-for="n in 3" :key="n" class="ma-8 pa-2" outlined tile>
         <div v-if="n === 1">
-          <v-img @click="dialog = true" src="./images/image1.jpeg" width="300" height="425"></v-img>
+          <v-img @click="dialog = true" src="./images/artWork1.jpeg" width="300" height="425"></v-img>
         </div>
         <div v-else-if="n === 2">
-          <v-img @click="dialog2 = true" src="./images/image2.png" width="300" height="425"></v-img>
+          <v-img @click="dialog2 = true" src="./images/artWork2.png" width="300" height="425"></v-img>
         </div>
         <div v-else-if="n === 3">
-          <v-img @click="dialog3 = true" src="./images/image3.png" width="300" height="425"></v-img>
+          <v-img @click="dialog3 = true" src="./images/artWork6.png" width="300" height="425"></v-img>
         </div>
         <br>
         <div v-if="n === 1" class="workName">
@@ -51,35 +51,35 @@
 
       <v-card v-for="n in 3" :key="n" class="ma-8 pa-2" outlined tile>
         <div v-if="n === 1">
-          <v-img @click="dialog4 = true" src="./images/image1.jpeg" width="300" height="425"></v-img>
+          <v-img @click="dialog4 = true" src="./images/artWork4.png" width="300" height="425"></v-img>
         </div>
         <div v-else-if="n === 2">
-          <v-img @click="dialog5 = true" src="./images/image1.jpeg" width="300" height="425"></v-img>
+          <v-img @click="dialog5 = true" src="./images/artWork5.png" width="300" height="425"></v-img>
         </div>
         <div v-else-if="n === 3">
-          <v-img @click="dialog6 = true" src="./images/image1.jpeg" width="300" height="425"></v-img>
+          <v-img @click="dialog6 = true" src="./images/artWork3.png" width="300" height="425"></v-img>
         </div>
         <br>
         <div v-if="n === 1" class="workName">
-          Toad House 2
+          Butterfly Effect (2019)
         </div>
         <div v-if="n === 2" class="workName">
-          Toad House 3
+          Under Pressure (2017)
         </div>
         <div v-if="n === 3" class="workName">
-          Toad House 4
+          Fragment (2018)
         </div>
       </v-card>
 
       <v-card v-for="n in 3" :key="n" class="ma-8 pa-2" outlined tile>
         <div v-if="n === 1">
-          <v-img @click="dialog7 = true" src="./images/image1.jpeg" width="300" height="425"></v-img>
+          <v-img @click="dialog7 = true" src="./images/artWork1.jpeg" width="300" height="425"></v-img>
         </div>
         <div v-else-if="n === 2">
-          <v-img @click="dialog8 = true" src="./images/image1.jpeg" width="300" height="425"></v-img>
+          <v-img @click="dialog8 = true" src="./images/artWork1.jpeg" width="300" height="425"></v-img>
         </div>
         <div v-else-if="n === 3">
-          <v-img @click="dialog9 = true" src="./images/image1.jpeg" width="300" height="425"></v-img>
+          <v-img @click="dialog9 = true" src="./images/artWork1.jpeg" width="300" height="425"></v-img>
         </div>
         <br>
         <div v-if="n === 1" class="workName">
@@ -96,49 +96,49 @@
 
     <!-- dialog (modal) -->
     <div class="text-center">
-      <v-dialog v-model="dialog" width="500">
+      <v-dialog v-model="dialog" width="600">
         <v-card>
-          <v-img @click="dialog = false" src="./images/image1.jpeg"></v-img>
+          <v-img @click="dialog = false" src="./images/artWork1.jpeg"></v-img>
         </v-card>
       </v-dialog>
-      <v-dialog v-model="dialog2" width="500">
+      <v-dialog v-model="dialog2" width="600">
         <v-card>
-          <v-img @click="dialog2 = false" src="./images/image2.png"></v-img>
+          <v-img @click="dialog2 = false" src="./images/artWork2.png"></v-img>
         </v-card>
       </v-dialog>
-      <v-dialog v-model="dialog3" width="500">
+      <v-dialog v-model="dialog3" width="600">
         <v-card>
-          <v-img @click="dialog3 = false" src="./images/image3.png"></v-img>
+          <v-img @click="dialog3 = false" src="./images/artWork6.png"></v-img>
         </v-card>
       </v-dialog>
-      <v-dialog v-model="dialog4" width="500">
+      <v-dialog v-model="dialog4" width="600">
         <v-card>
-          <v-img @click="dialog4 = false" src="./images/image1.jpeg"></v-img>
+          <v-img @click="dialog4 = false" src="./images/artWork4.png"></v-img>
         </v-card>
       </v-dialog>
       <v-dialog v-model="dialog5" width="500">
         <v-card>
-          <v-img @click="dialog5 = false" src="./images/image1.jpeg"></v-img>
+          <v-img @click="dialog5 = false" src="./images/artWork5.png"></v-img>
         </v-card>
       </v-dialog>
       <v-dialog v-model="dialog6" width="500">
         <v-card>
-          <v-img @click="dialog6 = false" src="./images/image1.jpeg"></v-img>
+          <v-img @click="dialog6 = false" src="./images/artWork1.jpeg"></v-img>
         </v-card>
       </v-dialog>
       <v-dialog v-model="dialog7" width="500">
         <v-card>
-          <v-img @click="dialog7 = false" src="./images/image1.jpeg"></v-img>
+          <v-img @click="dialog7 = false" src="./images/artWork1.jpeg"></v-img>
         </v-card>
       </v-dialog>
       <v-dialog v-model="dialog8" width="500">
         <v-card>
-          <v-img @click="dialog8 = false" src="./images/image1.jpeg"></v-img>
+          <v-img @click="dialog8 = false" src="./images/artWork1.jpeg"></v-img>
         </v-card>
       </v-dialog>
       <v-dialog v-model="dialog9" width="500">
         <v-card>
-          <v-img @click="dialog9 = false" src="./images/image1.jpeg"></v-img>
+          <v-img @click="dialog9 = false" src="./images/artWork1.jpeg"></v-img>
         </v-card>
       </v-dialog>
     </div>
