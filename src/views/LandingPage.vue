@@ -117,7 +117,7 @@
     </v-row>
 
     <!-- dialog (modal) -->
-    <div class="text-center">
+    <div class="prevent">
       <v-dialog v-model="dialog" width="600">
         <v-card>
           <v-img @click="dialog = false" src="./images/artWork1.jpeg"></v-img>
@@ -248,5 +248,12 @@ export default {
 
 .darkModeSwitch {
   float: right;
+}
+
+.prevent {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: fixed;
 }
 </style>
