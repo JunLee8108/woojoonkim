@@ -27,9 +27,9 @@
     <br><br><br><br><br>
 
     <v-row justify="center">
-      <v-card v-for="n in 3" :key="n" class="ma-8 pa-2" outlined tile>
+      <v-card v-for="n in 3" :key="n" class="cardClass" outlined tile>
         <div v-if="n === 1">
-          <v-img @click="dialog = true" src="./images/artWork1.jpeg" width="300" height="425"></v-img>
+          <v-img class="imageClass" @click="dialog = true" src="./images/artWork1.jpeg"></v-img>
         </div>
         <div v-else-if="n === 2">
           <v-img @click="dialog2 = true" src="./images/artWork7.png" width="300" height="425"></v-img>
@@ -49,7 +49,7 @@
         </div>
       </v-card>
 
-      <v-card v-for="n in 3" :key="n" class="ma-8 pa-2" outlined tile>
+      <v-card v-for="n in 3" :key="n" class="cardClass" outlined tile>
         <div v-if="n === 1">
           <v-img @click="dialog4 = true" src="./images/artWork5.png" width="300" height="425"></v-img>
         </div>
@@ -71,7 +71,7 @@
         </div>
       </v-card>
 
-      <v-card v-for="n in 3" :key="n" class="ma-8 pa-2" outlined tile>
+      <v-card v-for="n in 3" :key="n" class="cardClass" outlined tile>
         <div v-if="n === 1">
           <v-img @click="dialog7 = true" src="./images/artWork9.png" width="300" height="425"></v-img>
         </div>
@@ -93,7 +93,7 @@
         </div>
       </v-card>
 
-      <v-card v-for="n in 3" :key="n" class="ma-8 pa-2" outlined tile>
+      <v-card v-for="n in 3" :key="n" class="cardClass" outlined tile>
         <div v-if="n === 1">
           <v-img @click="dialog10 = true" src="./images/artWork13.png" width="300" height="425"></v-img>
         </div>
@@ -251,9 +251,33 @@ export default {
 }
 
 .prevent {
-  overflow: hidden;
-  width: 100%;
+  overflow: auto;
   height: 100%;
-  position: fixed;
+}
+
+.imageClass {
+  width: 300px;
+  height: 425px;
+}
+
+.cardClass {
+  height: 495px;
+  margin: 35px;
+  padding: 10px;
+}
+
+@media screen and (min-width:1904px) {
+  .imageClass {
+    width: 300px;
+    height: 425px;
+  }
+}
+
+@media screen and (min-width:1904px) {
+  .cardClass {
+    height: 495px;
+    margin: 70px;
+    padding: 10px;
+  }
 }
 </style>

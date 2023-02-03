@@ -30,15 +30,15 @@
                                             <br>
                                             <div class="introduceName2">Woojoon Kim.</div>
                                             <br>
-                                            <div class="introduction">I'm a fine art painter and artist. Currently based
+                                            <div class="introduction">I'm a fine art painter and artist, and currently based
+                                                in New York. I'm a fine art painter and artist, and currently based
+                                                in New York. I'm a fine art painter and artist, and currently based
+                                                in New York. I'm a fine art painter and artist, and currently based
+                                                in New York. I'm a fine art painter and artist, and currently based
                                                 in New York.
-                                                I'm a fine art painter and artist. Currently based in New York. I'm a
-                                                fine art painter and artist. Currently based in New York.
-                                                I'm a fine art painter and artist. Currently based in New York.I'm a
-                                                fine art painter and artist. Currently based in New York.
-                                                fine art painter and artist. Currently based in New York.
+ 
                                             </div>
-                                            <div class="introduction"></div>
+
                                         </v-card-text>
                                     </v-col>
                                 </v-row>
@@ -163,6 +163,13 @@ export default {
     }
 }
 
+@media screen and (min-width:1904px) {
+    .introduceImage {
+        margin-left: 90px;
+        height: 360px;
+    }
+}
+
 .introduceName {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
@@ -192,6 +199,14 @@ export default {
     .introduceName {
         font-size: 30px;
         margin-left: -188px;
+        margin-top: -50px;
+    }
+}
+
+@media screen and (min-width:1904px) {
+    .introduceName {
+        font-size: 45px;
+        margin-left: -780px;
         margin-top: -50px;
     }
 }
@@ -226,12 +241,20 @@ export default {
     }
 }
 
+@media screen and (min-width:1904px) {
+    .introduceName2 {
+        font-size: 60px;
+        margin-top: 20px;
+        margin-left: -660px;
+    }
+}
+
 .introduction {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
-    font-size: 18px;
-    margin-left: -70px;
-    margin-top: 10px;
+    font-size: 20px;
+    margin-left: -100px;
+    margin-top: 20px;
     color: grey;
 }
 
@@ -259,6 +282,16 @@ export default {
         text-align: center;
         margin-left: -50px;
         margin-top: 10px;
+    }
+}
+
+@media screen and (min-width:1904px) {
+    .introduction {
+        font-size: 24px;
+        text-align: center;
+        margin-left: -265px;
+        margin-top: 30px;
+        line-height: 1.2;
     }
 }
 
