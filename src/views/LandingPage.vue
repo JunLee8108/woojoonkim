@@ -32,10 +32,10 @@
           <v-img class="imageClass" @click="dialog = true" src="./images/1_Eden.png"></v-img>
         </div>
         <div v-else-if="n === 2">
-          <v-img @click="dialog2 = true" src="./images/2_Ustaarabu.png" width="300" height="425"></v-img>
+          <v-img class="imageClass" @click="dialog2 = true" src="./images/2_Ustaarabu.png"></v-img>
         </div>
         <div v-else-if="n === 3">
-          <v-img @click="dialog3 = true" src="./images/3_.png" width="300" height="425"></v-img>
+          <v-img class="imageClass" @click="dialog3 = true" src="./images/3_.png"></v-img>
         </div>
         <br>
         <div v-if="n === 1" class="workName">
@@ -51,13 +51,13 @@
 
       <v-card v-for="n in 3" :key="n" class="cardClass" outlined tile>
         <div v-if="n === 1">
-          <v-img @click="dialog4 = true" src="./images/4_Haka.png" width="300" height="425"></v-img>
+          <v-img class="imageClass" @click="dialog4 = true" src="./images/4_Haka.png"></v-img>
         </div>
         <div v-else-if="n === 2">
-          <v-img @click="dialog5 = true" src="./images/5_Toad_s House.png" width="300" height="425"></v-img>
+          <v-img class="imageClass" @click="dialog5 = true" src="./images/5_Toad_s House.png"></v-img>
         </div>
         <div v-else-if="n === 3">
-          <v-img @click="dialog6 = true" src="./images/6_UngNyeo.png" width="300" height="425"></v-img>
+          <v-img class="imageClass" @click="dialog6 = true" src="./images/6_UngNyeo.png"></v-img>
         </div>
         <br>
         <div v-if="n === 1" class="workName">
@@ -73,7 +73,7 @@
 
       <v-card v-for="n in 1" :key="n" class="cardClass" outlined tile>
         <div v-if="n === 1">
-          <v-img @click="dialog7 = true" src="./images/7_6th World.png" width="300" height="425"></v-img>
+          <v-img class="imageClass" @click="dialog7 = true" src="./images/7_6th World.png"></v-img>
         </div>
         <!-- <div v-else-if="n === 2">
           <v-img @click="dialog8 = true" src="./images/artWork10.png" width="300" height="425"></v-img>
@@ -272,6 +272,7 @@
     </div>
 
     <br><br>
+    
     <center>
       <FooterVue />
     </center>
@@ -349,11 +350,12 @@ export default {
 .imageClass {
   width: 300px;
   height: 425px;
+  cursor: pointer;
 }
 
 .cardClass {
   height: 495px;
-  margin: 35px;
+  margin: 36px;
   padding: 10px;
 }
 

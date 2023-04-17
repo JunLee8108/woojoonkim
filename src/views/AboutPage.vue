@@ -4,8 +4,11 @@
         <NavigationVue />
 
         <br>
-        <div class="mid">
-            About Me.
+        <div class="top">
+            Hello, It's me,
+        </div>
+        <div class="top-below">
+            Woojoon Kim.
         </div>
         <!-- <v-img src="./images/image4.png" width="300" height="300"></v-img> -->
 
@@ -25,20 +28,10 @@
                                     </v-col>
                                     <v-col cols="12" md="6" class="white rounded-bl-xl">
                                         <v-card-text class="mt-12">
-                                            <br /><br /><br /><br />
-                                            <div class="introduceName">Hello, it's me</div>
-                                            <br>
-                                            <div class="introduceName2">Woojoon Kim.</div>
-                                            <br>
+                                            <!-- <div class="introduceName2">Woojoon Kim.</div> -->
                                             <div class="introduction">I'm a fine art painter and artist, and currently based
-                                                in New York. I'm a fine art painter and artist, and currently based
-                                                in New York. I'm a fine art painter and artist, and currently based
-                                                in New York. I'm a fine art painter and artist, and currently based
-                                                in New York. I'm a fine art painter and artist, and currently based
                                                 in New York.
- 
                                             </div>
-
                                         </v-card-text>
                                     </v-col>
                                 </v-row>
@@ -60,7 +53,7 @@
                 Jun Lee
             </div>
             <div class="contributorName2">
-                Website Developer
+                Frontend Developer
             </div>
             <div class="contact">
                 lejhn1@gmail.com
@@ -129,12 +122,20 @@ export default {
     margin: 30px;
 }
 
-.mid {
+.top {
     text-align: center;
-    font-size: 50px;
+    font-size: 33px;
     font-family: 'Times New Roman', Times, serif;
-    margin-bottom: -40px;
-    font-style: italic;
+    margin-top: 40px;
+    margin-bottom: -5px;
+}
+
+.top-below {
+    text-align: center;
+    font-weight: 550;
+    font-size: 50px;
+    letter-spacing: 1.5px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .mid2 {
@@ -148,6 +149,7 @@ export default {
 .introduceImage {
     width: 350px;
     height: 350px;
+    border-radius: 5px;
 }
 
 @media screen and (min-width:601px) and (max-width: 960px) {
@@ -254,7 +256,7 @@ export default {
     text-align: center;
     font-size: 20px;
     margin-left: -100px;
-    margin-top: 20px;
+    margin-top: 120px;
     color: grey;
 }
 
@@ -263,7 +265,7 @@ export default {
         font-size: 20px;
         text-align: center;
         margin: 0;
-        margin-top: 10px;
+        margin-top: -70px;
     }
 }
 
