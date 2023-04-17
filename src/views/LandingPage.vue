@@ -272,7 +272,7 @@
     </div>
 
     <br><br>
-    
+
     <center>
       <FooterVue />
     </center>
@@ -310,6 +310,10 @@ export default {
       });
     },
   },
+
+  mounted() {
+    window.scrollTo(0, 0)
+  }
 };
 </script>
 
@@ -372,4 +376,5 @@ export default {
     margin: 70px;
     padding: 10px;
   }
-}</style>
+}
+</style>

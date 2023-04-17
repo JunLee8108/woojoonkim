@@ -87,6 +87,10 @@ export default {
     data: () => ({
 
     }),
+
+    mounted() {
+        window.scrollTo(0, 0)
+    }
 };
 </script>
 
@@ -274,7 +278,7 @@ export default {
         font-size: 20px;
         text-align: center;
         margin: 0;
-        margin-top: 10px;
+        margin-top: -70px;
     }
 }
 
@@ -283,7 +287,7 @@ export default {
         font-size: 18px;
         text-align: center;
         margin-left: -50px;
-        margin-top: 10px;
+        margin-top: 120px;
     }
 }
 
@@ -291,8 +295,8 @@ export default {
     .introduction {
         font-size: 24px;
         text-align: center;
-        margin-left: -265px;
-        margin-top: 30px;
+        margin-left: -500px;
+        margin-top: 120px;
         line-height: 1.2;
     }
 }
