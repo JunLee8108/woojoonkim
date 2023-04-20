@@ -22,7 +22,7 @@
                                     <v-col cols="12" md="6">
                                         <div style="text-align: center; padding: 20px 0">
                                             <v-card-text class="white--text">
-                                                <v-img class="introduceImage" src="./images/image4.png" />
+                                                <v-img class="introduceImage" src="./images/woojoonKim.png" />
                                             </v-card-text>
                                         </div>
                                     </v-col>
