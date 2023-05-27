@@ -2,8 +2,6 @@
   <v-container>
     <v-app-bar app elevation="0" color="white" height="50px">
       <v-spacer></v-spacer>
-
-      <!-- <router-link class="linkStyle" style="color: inherit" to="/about">Woojoon Kim</router-link> -->
       <v-hover v-slot="{ hover }">
         <v-btn @click="moveAbout()" :class="{ 'on-hover': hover }" :elevation="hover ? 5 : 0" width="100%" plain>
           <div class="artistName">
@@ -92,28 +90,6 @@
           Third Adam pt3.
         </div> -->
       </v-card>
-
-      <!-- <v-card v-for="n in 3" :key="n" class="cardClass" outlined tile>
-        <div v-if="n === 1">
-          <v-img @click="dialog10 = true" src="./images/artWork13.png" width="300" height="425"></v-img>
-        </div>
-        <div v-else-if="n === 2">
-          <v-img @click="dialog11 = true" src="./images/artWork14.png" width="300" height="425"></v-img>
-        </div>
-        <div v-else-if="n === 3">
-          <v-img @click="dialog12 = true" src="./images/artWork16.png" width="300" height="425"></v-img>
-        </div>
-        <br>
-        <div v-if="n === 1" class="workName">
-          Beauty
-        </div>
-        <div v-if="n === 2" class="workName">
-          Seasons
-        </div>
-        <div v-if="n === 3" class="workName">
-          Kiss
-        </div>
-      </v-card> -->
     </v-row>
 
     <!-- dialog (modal) -->
@@ -133,8 +109,62 @@
             not clash but
             harmonize with another instead.
           </v-card-text>
+          <center>
+            <v-dialog v-model="dialog_request" max-width="600px">
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn color="black" dark v-bind="attrs" v-on="on">
+                  Request purchase
+                </v-btn>
+              </template>
+              <v-card>
+                <v-card-title>
+                  <span class="text-h5 bold">Purchase Form</span>
+                </v-card-title>
+                <v-card-text>
+                  <v-container>
+                    <v-row>
+                      <v-col cols="12" sm="6" md="4">
+                        <v-text-field label="Legal first name*" required></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6" md="4">
+                        <v-text-field label="Legal middle name"></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6" md="4">
+                        <v-text-field label="Legal last name*" required></v-text-field>
+                      </v-col>
+                      <v-col cols="12">
+                        <v-text-field label="Email*" required></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6">
+                        <v-select :items="['0-17', '18-29', '30-54', '55-69', '70+']" label="Age*" required></v-select>
+                      </v-col>
+                      <!-- <v-col cols="12" sm="6">
+                        <v-autocomplete
+                          :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
+                          label="Interests" multiple></v-autocomplete>
+                      </v-col> -->
+                    </v-row>
+                  </v-container>
+                  <small>- * indicates required field</small>
+                  <br>
+                  <small>- After checking the availability, we will contact you later </small>
+                </v-card-text>
+                <v-card-actions>
+                  <v-spacer></v-spacer>
+                  <v-btn color="blue darken-1" text @click="dialog_request = false">
+                    Close
+                  </v-btn>
+                  <v-btn color="red darken-1" text @click="dialog_request = false">
+                    Submit
+                  </v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-dialog>
+          </center>
+          <br>
         </v-card>
       </v-dialog>
+
       <v-dialog v-model="dialog2" width="850">
         <v-card>
           <v-img @click="dialog2 = false" src="./images/2_Ustaarabu.png"></v-img>
@@ -148,8 +178,62 @@
             religion was an efficient methods to share the same perception of the world from different individuals, and
             even formed sense of morality later becoming a foundation for laws.
           </v-card-text>
+          <center>
+            <v-dialog v-model="dialog_request" max-width="600px">
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn color="black" dark v-bind="attrs" v-on="on">
+                  Request purchase
+                </v-btn>
+              </template>
+              <v-card>
+                <v-card-title>
+                  <span class="text-h5 bold">Purchase Form</span>
+                </v-card-title>
+                <v-card-text>
+                  <v-container>
+                    <v-row>
+                      <v-col cols="12" sm="6" md="4">
+                        <v-text-field label="Legal first name*" required></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6" md="4">
+                        <v-text-field label="Legal middle name"></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6" md="4">
+                        <v-text-field label="Legal last name*" required></v-text-field>
+                      </v-col>
+                      <v-col cols="12">
+                        <v-text-field label="Email*" required></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6">
+                        <v-select :items="['0-17', '18-29', '30-54', '55-69', '70+']" label="Age*" required></v-select>
+                      </v-col>
+                      <!-- <v-col cols="12" sm="6">
+                        <v-autocomplete
+                          :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
+                          label="Interests" multiple></v-autocomplete>
+                      </v-col> -->
+                    </v-row>
+                  </v-container>
+                  <small>- * indicates required field</small>
+                  <br>
+                  <small>- After checking the availability, we will contact you later </small>
+                </v-card-text>
+                <v-card-actions>
+                  <v-spacer></v-spacer>
+                  <v-btn color="blue darken-1" text @click="dialog_request = false">
+                    Close
+                  </v-btn>
+                  <v-btn color="red darken-1" text @click="dialog_request = false">
+                    Submit
+                  </v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-dialog>
+          </center>
+          <br>
         </v-card>
       </v-dialog>
+
       <v-dialog v-model="dialog3" width="850">
         <v-card>
           <v-img @click="dialog3 = false" src="./images/3_.png"></v-img>
@@ -168,8 +252,62 @@
             are these technological
             advancements are necessary to shape our society into a heaven.
           </v-card-text>
+          <center>
+            <v-dialog v-model="dialog_request" max-width="600px">
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn color="black" dark v-bind="attrs" v-on="on">
+                  Request purchase
+                </v-btn>
+              </template>
+              <v-card>
+                <v-card-title>
+                  <span class="text-h5 bold">Purchase Form</span>
+                </v-card-title>
+                <v-card-text>
+                  <v-container>
+                    <v-row>
+                      <v-col cols="12" sm="6" md="4">
+                        <v-text-field label="Legal first name*" required></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6" md="4">
+                        <v-text-field label="Legal middle name"></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6" md="4">
+                        <v-text-field label="Legal last name*" required></v-text-field>
+                      </v-col>
+                      <v-col cols="12">
+                        <v-text-field label="Email*" required></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6">
+                        <v-select :items="['0-17', '18-29', '30-54', '55-69', '70+']" label="Age*" required></v-select>
+                      </v-col>
+                      <!-- <v-col cols="12" sm="6">
+                        <v-autocomplete
+                          :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
+                          label="Interests" multiple></v-autocomplete>
+                      </v-col> -->
+                    </v-row>
+                  </v-container>
+                  <small>- * indicates required field</small>
+                  <br>
+                  <small>- After checking the availability, we will contact you later </small>
+                </v-card-text>
+                <v-card-actions>
+                  <v-spacer></v-spacer>
+                  <v-btn color="blue darken-1" text @click="dialog_request = false">
+                    Close
+                  </v-btn>
+                  <v-btn color="red darken-1" text @click="dialog_request = false">
+                    Submit
+                  </v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-dialog>
+          </center>
+          <br>
         </v-card>
       </v-dialog>
+
       <v-dialog v-model="dialog4" width="850">
         <v-card>
           <v-img @click="dialog4 = false" src="./images/4_Haka.png"></v-img>
@@ -188,8 +326,62 @@
             any bloods nor
             killing any people.
           </v-card-text>
+          <center>
+            <v-dialog v-model="dialog_request" max-width="600px">
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn color="black" dark v-bind="attrs" v-on="on">
+                  Request purchase
+                </v-btn>
+              </template>
+              <v-card>
+                <v-card-title>
+                  <span class="text-h5 bold">Purchase Form</span>
+                </v-card-title>
+                <v-card-text>
+                  <v-container>
+                    <v-row>
+                      <v-col cols="12" sm="6" md="4">
+                        <v-text-field label="Legal first name*" required></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6" md="4">
+                        <v-text-field label="Legal middle name"></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6" md="4">
+                        <v-text-field label="Legal last name*" required></v-text-field>
+                      </v-col>
+                      <v-col cols="12">
+                        <v-text-field label="Email*" required></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6">
+                        <v-select :items="['0-17', '18-29', '30-54', '55-69', '70+']" label="Age*" required></v-select>
+                      </v-col>
+                      <!-- <v-col cols="12" sm="6">
+                        <v-autocomplete
+                          :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
+                          label="Interests" multiple></v-autocomplete>
+                      </v-col> -->
+                    </v-row>
+                  </v-container>
+                  <small>- * indicates required field</small>
+                  <br>
+                  <small>- After checking the availability, we will contact you later </small>
+                </v-card-text>
+                <v-card-actions>
+                  <v-spacer></v-spacer>
+                  <v-btn color="blue darken-1" text @click="dialog_request = false">
+                    Close
+                  </v-btn>
+                  <v-btn color="red darken-1" text @click="dialog_request = false">
+                    Submit
+                  </v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-dialog>
+          </center>
+          <br>
         </v-card>
       </v-dialog>
+
       <v-dialog v-model="dialog5" width="600">
         <v-card>
           <v-img @click="dialog5 = false" src="./images/5_Toad_s House.png"></v-img>
@@ -206,8 +398,62 @@
             will give my old house, so give me a new house” while digging a tunnel in the ground. Perhaps this absurd
             lyrics represent my ancestor’s desire to live in a stability after facing numerous shifts.
           </v-card-text>
+          <center>
+            <v-dialog v-model="dialog_request" max-width="600px">
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn color="black" dark v-bind="attrs" v-on="on">
+                  Request purchase
+                </v-btn>
+              </template>
+              <v-card>
+                <v-card-title>
+                  <span class="text-h5 bold">Purchase Form</span>
+                </v-card-title>
+                <v-card-text>
+                  <v-container>
+                    <v-row>
+                      <v-col cols="12" sm="6" md="4">
+                        <v-text-field label="Legal first name*" required></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6" md="4">
+                        <v-text-field label="Legal middle name"></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6" md="4">
+                        <v-text-field label="Legal last name*" required></v-text-field>
+                      </v-col>
+                      <v-col cols="12">
+                        <v-text-field label="Email*" required></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6">
+                        <v-select :items="['0-17', '18-29', '30-54', '55-69', '70+']" label="Age*" required></v-select>
+                      </v-col>
+                      <!-- <v-col cols="12" sm="6">
+                        <v-autocomplete
+                          :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
+                          label="Interests" multiple></v-autocomplete>
+                      </v-col> -->
+                    </v-row>
+                  </v-container>
+                  <small>- * indicates required field</small>
+                  <br>
+                  <small>- After checking the availability, we will contact you later </small>
+                </v-card-text>
+                <v-card-actions>
+                  <v-spacer></v-spacer>
+                  <v-btn color="blue darken-1" text @click="dialog_request = false">
+                    Close
+                  </v-btn>
+                  <v-btn color="red darken-1" text @click="dialog_request = false">
+                    Submit
+                  </v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-dialog>
+          </center>
+          <br>
         </v-card>
       </v-dialog>
+
       <v-dialog v-model="dialog6" width="600">
         <v-card>
           <v-img @click="dialog6 = false" src="./images/6_UngNyeo.png"></v-img>
@@ -226,8 +472,62 @@
             tribe who worships tiger. If you read the mythology once again, it suggests that tribe of bears represented by
             Ung Nyeo perhaps won from this war, and became the foundation of Korean people up to this date.
           </v-card-text>
+          <center>
+            <v-dialog v-model="dialog_request" max-width="600px">
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn color="black" dark v-bind="attrs" v-on="on">
+                  Request purchase
+                </v-btn>
+              </template>
+              <v-card>
+                <v-card-title>
+                  <span class="text-h5 bold">Purchase Form</span>
+                </v-card-title>
+                <v-card-text>
+                  <v-container>
+                    <v-row>
+                      <v-col cols="12" sm="6" md="4">
+                        <v-text-field label="Legal first name*" required></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6" md="4">
+                        <v-text-field label="Legal middle name"></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6" md="4">
+                        <v-text-field label="Legal last name*" required></v-text-field>
+                      </v-col>
+                      <v-col cols="12">
+                        <v-text-field label="Email*" required></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6">
+                        <v-select :items="['0-17', '18-29', '30-54', '55-69', '70+']" label="Age*" required></v-select>
+                      </v-col>
+                      <!-- <v-col cols="12" sm="6">
+                        <v-autocomplete
+                          :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
+                          label="Interests" multiple></v-autocomplete>
+                      </v-col> -->
+                    </v-row>
+                  </v-container>
+                  <small>- * indicates required field</small>
+                  <br>
+                  <small>- After checking the availability, we will contact you later </small>
+                </v-card-text>
+                <v-card-actions>
+                  <v-spacer></v-spacer>
+                  <v-btn color="blue darken-1" text @click="dialog_request = false">
+                    Close
+                  </v-btn>
+                  <v-btn color="red darken-1" text @click="dialog_request = false">
+                    Submit
+                  </v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-dialog>
+          </center>
+          <br>
         </v-card>
       </v-dialog>
+
       <v-dialog v-model="dialog7" width="600">
         <v-card>
           <v-img @click="dialog7 = false" src="./images/7_6th World.png"></v-img>
@@ -242,6 +542,59 @@
             covered with feathers known as Quetzalcóatl, where he provided movement to the Sun, moon and stars and gave
             cycle of life.
           </v-card-text>
+          <center>
+            <v-dialog v-model="dialog_request" max-width="600px">
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn color="black" dark v-bind="attrs" v-on="on">
+                  Request purchase
+                </v-btn>
+              </template>
+              <v-card>
+                <v-card-title>
+                  <span class="text-h5 bold">Purchase Form</span>
+                </v-card-title>
+                <v-card-text>
+                  <v-container>
+                    <v-row>
+                      <v-col cols="12" sm="6" md="4">
+                        <v-text-field label="Legal first name*" required></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6" md="4">
+                        <v-text-field label="Legal middle name"></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6" md="4">
+                        <v-text-field label="Legal last name*" required></v-text-field>
+                      </v-col>
+                      <v-col cols="12">
+                        <v-text-field label="Email*" required></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6">
+                        <v-select :items="['0-17', '18-29', '30-54', '55-69', '70+']" label="Age*" required></v-select>
+                      </v-col>
+                      <!-- <v-col cols="12" sm="6">
+                        <v-autocomplete
+                          :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
+                          label="Interests" multiple></v-autocomplete>
+                      </v-col> -->
+                    </v-row>
+                  </v-container>
+                  <small>- * indicates required field</small>
+                  <br>
+                  <small>- After checking the availability, we will contact you later </small>
+                </v-card-text>
+                <v-card-actions>
+                  <v-spacer></v-spacer>
+                  <v-btn color="blue darken-1" text @click="dialog_request = false">
+                    Close
+                  </v-btn>
+                  <v-btn color="red darken-1" text @click="dialog_request = false">
+                    Submit
+                  </v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-dialog>
+          </center>
+          <br>
         </v-card>
       </v-dialog>
     </div>
@@ -265,6 +618,7 @@ export default {
 
   data: () => ({
     dialog: false,
+    dialog_request: false,
     dialog2: false,
     dialog3: false,
     dialog4: false,
