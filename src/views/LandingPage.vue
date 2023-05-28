@@ -12,6 +12,17 @@
       <v-spacer></v-spacer>
     </v-app-bar>
 
+    <div class="language2">
+      Language:
+      <select class="language" v-model="lang" @change="handleChange($event)">
+        <option value="en"> English</option>
+        <option value="ko">Korean</option>
+      </select>
+    </div>
+
+
+
+
     <!-- <v-switch class="darkModeSwitch" v-model="$vuetify.theme.dark" inset label="Dark Mode"></v-switch> -->
 
     <br><br><br>
@@ -124,7 +135,7 @@
                   <v-container>
                     <v-row>
                       <v-col cols="12" sm="6" md="4">
-                        <v-text-field label="Legal first name*" required></v-text-field>
+                        <v-text-field clearable label="Legal first name*" required></v-text-field>
                       </v-col>
                       <v-col cols="12" sm="6" md="4">
                         <v-text-field label="Legal middle name"></v-text-field>
@@ -630,6 +641,7 @@ export default {
     dialog10: false,
     dialog11: false,
     dialog12: false,
+    lang: localStorage.getItem('lang') || 'en'
   }),
 
   methods: {
@@ -638,6 +650,11 @@ export default {
         path: "about",
       });
     },
+
+    handleChange(event) {
+      localStorage.setItem('lang', event.target.value);
+      window.location.reload();
+    }
   },
 
   mounted() {
@@ -690,6 +707,21 @@ export default {
   height: 495px;
   margin: 36px;
   padding: 10px;
+}
+
+.language {
+  float: right;
+  margin-left: 7px;
+  cursor: pointer;
+  font-size: 12px;
+  color: blue;
+}
+
+.language2 {
+  float: right;
+  font-size: 12px;
+  border: 2px solid #EBECF0;
+  padding: 5px;
 }
 
 @media screen and (min-width:1904px) {
