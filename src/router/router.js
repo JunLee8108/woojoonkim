@@ -1,27 +1,29 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import LandingPage from '../views/LandingPage.vue'
-import AboutPage from '../views/AboutPage.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
+
+function lazyLoad(view) {
+  return () => import(`@/views/${view}.vue`);
+}
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: LandingPage
+    path: "/",
+    name: "home",
+    component: lazyLoad("LandingPage"),
   },
   {
-    path: '/about',
-    name: 'about',
-    component: AboutPage
+    path: "/about",
+    name: "about",
+    component: lazyLoad("AboutPage"),
   },
-]
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
