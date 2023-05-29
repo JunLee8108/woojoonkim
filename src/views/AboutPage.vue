@@ -50,7 +50,7 @@
         <br><br>
         <v-container>
             <div class="contributorName">
-                Jun Lee
+                Jeong Hyun Lee
             </div>
             <div class="contributorName2">
                 Frontend Developer
@@ -103,14 +103,15 @@ export default {
 .contributorName {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .contributorName2 {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
 }
 

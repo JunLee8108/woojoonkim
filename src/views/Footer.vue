@@ -10,7 +10,7 @@
 
                 <v-card-text class="cardSecond">
                     In no event shall any part or all of the images be reproduced, transmitted, distributed or altered
-                    without official permission. 
+                    without official permission.
                 </v-card-text>
 
                 <v-card-text>
@@ -24,7 +24,7 @@
                 <v-divider></v-divider>
 
                 <v-card-text class="footerFont">
-                    {{ new Date().getFullYear() }} — <strong>Woojoon Kim, Jun Lee</strong>
+                    {{ new Date().getFullYear() }} — <strong>Woojoon Kim, Jeong Hyun Lee</strong>
                 </v-card-text>
             </v-card>
             <v-spacer></v-spacer>
@@ -63,9 +63,9 @@ export default {
     position: absolute;
     align-items: center;
     bottom: 0;
-    margin:0 auto; 
-    text-align:center;
-    
+    margin: 0 auto;
+    text-align: center;
+
     height: 0px;
 }
 

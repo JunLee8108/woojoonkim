@@ -12,16 +12,16 @@
       <v-spacer></v-spacer>
     </v-app-bar>
 
-    <div class="language2">
+    <v-google-translate :defaultLanguageCode="defaultLanguageCode" :defaultPageLanguageCode="defaultPageLanguageCode"
+      :fetchBrowserLanguage="false" @select="languageSelectedHandler" />
+
+    <!-- <div class="language2">
       Language:
       <select class="language" v-model="lang" @change="handleChange($event)">
         <option value="en"> English</option>
         <option value="ko">Korean</option>
       </select>
-    </div>
-
-
-
+    </div> -->
 
     <!-- <v-switch class="darkModeSwitch" v-model="$vuetify.theme.dark" inset label="Dark Mode"></v-switch> -->
 
@@ -112,11 +112,15 @@
             Eden
           </v-card-title>
           <v-card-text>
-            Imagination of our future often gets to put into the margin between Utopia and Dystopia. I firmly believe that
-            the key factor of dividing these two contrasting idea is an existence of individual freedom in the society, as
+            Imagination of our future often gets to put into the margin between Utopia and Dystopia. I firmly believe
+            that
+            the key factor of dividing these two contrasting idea is an existence of individual freedom in the
+            society, as
             we already experienced numerous
-            historical tragedy as an outcome of absence of freedom under the authoritarian beliefs. Therefore, I imagine
-            Utopia as a place where each individual’s idea to be placed in more accepted manner, where different ideas do
+            historical tragedy as an outcome of absence of freedom under the authoritarian beliefs. Therefore, I
+            imagine
+            Utopia as a place where each individual’s idea to be placed in more accepted manner, where different ideas
+            do
             not clash but
             harmonize with another instead.
           </v-card-text>
@@ -186,7 +190,8 @@
             Humans started to rapidly dominate the natural world enhancing their ability to build a community in
             incomparable scale than the other animals, and religions often was the main catalyst for their source of
             unity. In the early stage of human civilization,
-            religion was an efficient methods to share the same perception of the world from different individuals, and
+            religion was an efficient methods to share the same perception of the world from different individuals,
+            and
             even formed sense of morality later becoming a foundation for laws.
           </v-card-text>
           <center>
@@ -255,11 +260,13 @@
             Buddhist idea of 極樂 (Guk-Lak) have two separated branch. First is 極樂淨土 (Guk-Lak-Jung-To), an idea that is
             similar to the Abraham branch religion’s heaven, where you must constantly work in order to achieve
             enlightenment to enter the heaven, while the
-            other idea known as 唯心淨土 (Yu-Sim-Jung-To) suggests that heaven is already inside everyone’s heart, and we must
+            other idea known as 唯心淨土 (Yu-Sim-Jung-To) suggests that heaven is already inside everyone’s heart, and we
+            must
             get rid of all the greeds and worries and accept that our life itself already is a heaven. Throughout the
             history of mankind,
             humans have developed the society by sacrificing individual’s happiness in order to achieve each society’s
-            perception of utopia. Perhaps in this time of rapid technological progress, we need to question ourselves if
+            perception of utopia. Perhaps in this time of rapid technological progress, we need to question ourselves
+            if
             are these technological
             advancements are necessary to shape our society into a heaven.
           </v-card-text>
@@ -326,14 +333,20 @@
             Haka
           </v-card-title>
           <v-card-text>
-            Civilization arose in the Pacific islands known as Polynesian has remarkable trait of sharing relatively the
-            similar religious beliefs, culture, and language along the 1,000 islands in Pacific Ocean. Maori tribe is one
+            Civilization arose in the Pacific islands known as Polynesian has remarkable trait of sharing relatively
+            the
+            similar religious beliefs, culture, and language along the 1,000 islands in Pacific Ocean. Maori tribe is
+            one
             of the most well-known tribe among
-            them, famous for their ritual/performance at the beginning of the battle known as “Haka”, where warriors of
-            the Maori tribe horrendous expressions with their face and movement. Haka is such a fascinating war tactics,
+            them, famous for their ritual/performance at the beginning of the battle known as “Haka”, where warriors
+            of
+            the Maori tribe horrendous expressions with their face and movement. Haka is such a fascinating war
+            tactics,
             as people believed
-            that by performing the Haka, warriors absorbs the enemies “Mana”(spirit) from their fear, and as numbers of
-            Polynesian society shared similar belief, Warriors of Maori were able to win numerous battles without shedding
+            that by performing the Haka, warriors absorbs the enemies “Mana”(spirit) from their fear, and as numbers
+            of
+            Polynesian society shared similar belief, Warriors of Maori were able to win numerous battles without
+            shedding
             any bloods nor
             killing any people.
           </v-card-text>
@@ -400,12 +413,15 @@
             Toad’s House
           </v-card-title>
           <v-card-text>
-            In Korea, toads often symbolize the wisdom, rich, and stability. And if you take a brief look at the history
-            of Korea, it is full of continuous internal changes brought by the invaders from different countries due to
+            In Korea, toads often symbolize the wisdom, rich, and stability. And if you take a brief look at the
+            history
+            of Korea, it is full of continuous internal changes brought by the invaders from different countries due
+            to
             its geographical location. And often times it was the common people who were suffered and sacrificed from
             these drastic changes within the society.
 
-            Originally, Toad’s house is a traditional children’s song and play from Korea, where kids sing “Toad, Toad, I
+            Originally, Toad’s house is a traditional children’s song and play from Korea, where kids sing “Toad,
+            Toad, I
             will give my old house, so give me a new house” while digging a tunnel in the ground. Perhaps this absurd
             lyrics represent my ancestor’s desire to live in a stability after facing numerous shifts.
           </v-card-text>
@@ -472,15 +488,21 @@
             Ung-Nyeo
           </v-card-title>
           <v-card-text>
-            Ung-Nyeo is a character from the ancient Korean mythology, DanGun myth. In this ancient mythology, there were
-            once a bear and a tiger went in a journey to find god(Ok-Hwang-Sang-Jeh) with a desire of becoming human. And
+            Ung-Nyeo is a character from the ancient Korean mythology, DanGun myth. In this ancient mythology, there
+            were
+            once a bear and a tiger went in a journey to find god(Ok-Hwang-Sang-Jeh) with a desire of becoming human.
+            And
             after they met god, god gave them a test where both bear and tiger had to stay inside the cave just eating
-            garlics and mugwort for 100 days, in return of granting their wish to become a human. At the end of the test,
-            bear was the only one who succeeded the task, granted her wish to become a human and became the first queen of
+            garlics and mugwort for 100 days, in return of granting their wish to become a human. At the end of the
+            test,
+            bear was the only one who succeeded the task, granted her wish to become a human and became the first
+            queen of
             Korea.
 
-            Recent discoveries from China recorded a war from the Manchurian region by the tribe who worships bears, and
-            tribe who worships tiger. If you read the mythology once again, it suggests that tribe of bears represented by
+            Recent discoveries from China recorded a war from the Manchurian region by the tribe who worships bears,
+            and
+            tribe who worships tiger. If you read the mythology once again, it suggests that tribe of bears
+            represented by
             Ung Nyeo perhaps won from this war, and became the foundation of Korean people up to this date.
           </v-card-text>
           <center>
@@ -546,11 +568,15 @@
             6th World
           </v-card-title>
           <v-card-text>
-            In one of the most popular variation of Aztec mythology, people of Aztec believed our universe repeats from
-            the process of creation and destruction, and the current universe we’re living in today is the 5th universe
+            In one of the most popular variation of Aztec mythology, people of Aztec believed our universe repeats
+            from
+            the process of creation and destruction, and the current universe we’re living in today is the 5th
+            universe
             known as universe of movement. In order to create this universe of movement, Tonatiuh, ugliest god who
-            willingly sacrificed himself in fire to become a sun, and each gods sacrificed their heart to the sacred snake
-            covered with feathers known as Quetzalcóatl, where he provided movement to the Sun, moon and stars and gave
+            willingly sacrificed himself in fire to become a sun, and each gods sacrificed their heart to the sacred
+            snake
+            covered with feathers known as Quetzalcóatl, where he provided movement to the Sun, moon and stars and
+            gave
             cycle of life.
           </v-card-text>
           <center>
