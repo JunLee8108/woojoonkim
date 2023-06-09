@@ -12,8 +12,9 @@
       <v-spacer></v-spacer>
     </v-app-bar>
 
-    <v-google-translate :defaultLanguageCode="defaultLanguageCode" :defaultPageLanguageCode="defaultPageLanguageCode"
-      :fetchBrowserLanguage="false" @select="languageSelectedHandler" />
+    <div class="translate">
+      <v-google-translate />
+    </div>
 
     <!-- <div class="language2">
       Language:
@@ -60,13 +61,13 @@
 
       <v-card v-for="n in 3" :key="n" class="cardClass" outlined tile>
         <div v-if="n === 1">
-          <v-img class="imageClass" @click="dialog4 = true" src="./images/4_Haka.png"></v-img>
+          <v-img class="imageClass" @click="dialog4 = true" src="./images/4_Haka.webp"></v-img>
         </div>
         <div v-else-if="n === 2">
-          <v-img class="imageClass" @click="dialog5 = true" src="./images/5_Toad_s House.png"></v-img>
+          <v-img class="imageClass" @click="dialog5 = true" src="./images/5_Toad_s-House.webp"></v-img>
         </div>
         <div v-else-if="n === 3">
-          <v-img class="imageClass" @click="dialog6 = true" src="./images/6_UngNyeo.png"></v-img>
+          <v-img class="imageClass" @click="dialog6 = true" src="./images/6_UngNyeo.webp"></v-img>
         </div>
         <br>
         <div v-if="n === 1" class="workName">
@@ -82,7 +83,7 @@
 
       <v-card v-for="n in 1" :key="n" class="cardClass" outlined tile>
         <div v-if="n === 1">
-          <v-img class="imageClass" @click="dialog7 = true" src="./images/7_6th World.png"></v-img>
+          <v-img class="imageClass" @click="dialog7 = true" src="./images/7_6th-World.webp"></v-img>
         </div>
         <!-- <div v-else-if="n === 2">
           <v-img @click="dialog8 = true" src="./images/artWork10.png" width="300" height="425"></v-img>
@@ -328,7 +329,7 @@
 
       <v-dialog v-model="dialog4" width="850">
         <v-card>
-          <v-img @click="dialog4 = false" src="./images/4_Haka.png"></v-img>
+          <v-img @click="dialog4 = false" src="./images/4_Haka.webp"></v-img>
           <v-card-title class="text-h5">
             Haka
           </v-card-title>
@@ -408,7 +409,7 @@
 
       <v-dialog v-model="dialog5" width="600">
         <v-card>
-          <v-img @click="dialog5 = false" src="./images/5_Toad_s House.png"></v-img>
+          <v-img @click="dialog5 = false" src="./images/5_Toad_s-House.webp"></v-img>
           <v-card-title class="text-h5">
             Toad’s House
           </v-card-title>
@@ -483,7 +484,7 @@
 
       <v-dialog v-model="dialog6" width="600">
         <v-card>
-          <v-img @click="dialog6 = false" src="./images/6_UngNyeo.png"></v-img>
+          <v-img @click="dialog6 = false" src="./images/6_UngNyeo.webp"></v-img>
           <v-card-title class="text-h5">
             Ung-Nyeo
           </v-card-title>
@@ -563,7 +564,7 @@
 
       <v-dialog v-model="dialog7" width="600">
         <v-card>
-          <v-img @click="dialog7 = false" src="./images/7_6th World.png"></v-img>
+          <v-img @click="dialog7 = false" src="./images/7_6th-World.webp"></v-img>
           <v-card-title class="text-h5">
             6th World
           </v-card-title>
@@ -690,6 +691,10 @@ export default {
 </script>
 
 <style>
+.translate {
+  cursor: pointer;
+}
+
 .artistName {
   font-size: 15px;
   font-family: 'Times New Roman', Times, serif;
